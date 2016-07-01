@@ -43,13 +43,14 @@
 + (UIEdgeInsets)edgeInsets
 {
     /*- (CGRect)boundingRectWithSize:(CGSize)size options:(NSStringDrawingOptions)options attributes:(nullable NSDictionary<NSString *, id> *)attributes context:(nullable NSStringDrawingContext *)context NS_AVAILABLE(10_11, 7_0);
-     方法计算label的大小时，由于不会调用textRectForBounds方法，并不会计算自己通过edgeInsets插入的内边距，而是实际的大小，因此手动返回*/
-    return UIEdgeInsetsMake(5, 0, 3, 0);
+     方法计算label的大小时，由于不会调用textRectForBounds方法，并不会计算自己通过edgeInsets插入的内边距，而是实际的大小，因此手动返回进行修正*/
+    return UIEdgeInsetsMake(25, 0, 25, 0);
 }
 
-//所有label的属性在这里面设置
+
 + (NSDictionary *)textLabelArrtibute
 {
+//    可以通过 NSMutableParagraphStyle修改左边内边距
     NSMutableDictionary *attribute = [NSMutableDictionary dictionary];
     attribute[NSFontAttributeName] = [UIFont systemFontOfSize:16];
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
