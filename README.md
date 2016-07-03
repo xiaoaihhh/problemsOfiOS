@@ -31,7 +31,7 @@ problemsOfiOS
 @implementation SFLabel
 
 
-//下面是那个方法用来初始化edgeInsets
+//下面三个方法用来初始化edgeInsets
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if(self = [super initWithFrame:frame])
@@ -51,10 +51,11 @@ problemsOfiOS
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     self.edgeInsets = UIEdgeInsetsMake(25, 0, 25, 0);
 }
 
-// 修改会址文字的区域，edgeInsets增加bounds
+// 修改绘制文字的区域，edgeInsets增加bounds
 -(CGRect)textRectForBounds:(CGRect)bounds limitedToNumberOfLines:(NSInteger)numberOfLines
 {
 
@@ -85,7 +86,9 @@ problemsOfiOS
 将UIlabel的类型改为SFLabel，看看现在效果是否如第二幅图😊。
 
 ### 注意事项
-- 通过SFLabel中的方法修改UILabel的内边距最好只修改上下内边距，通过NSMutableParagraphStyle是可以修改左边内边距的；
+- 通过SFLabel中的方法修改UILabel的内边距最好只修改上下内边距，通过系统NSMutableParagraphStyle是可以修改左边内边距的；
 - 通过`boundingRectWithSize:options:attributes:context:`计算SFLabel内容计算出的区域仍然是与直接使用UILabel的结果一样，因此需要小心使用，可以在`boundingRectWithSize:options:attributes:context:`基础上根据edgeInsets进行修正。
+
+[SFLabel源码](https://github.com/SwiftlyFly/problemsOfiOS/tree/master/SFLabel)
 
 
