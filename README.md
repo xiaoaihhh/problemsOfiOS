@@ -5,6 +5,7 @@ problemsOfiOS
 
 ##目录
 [设置UILabel的内边距](#设置UILabel的内边距)
+
 [UITextField右对齐无法输入空格解决方案](#UITextField右对齐无法输入空格解决方案)
 
 
@@ -224,4 +225,7 @@ PS：谁有更好的方法@一下哦。
 ###参考
 基本是下面解决方案的汇总，下面有的回答也存在一些其他小问题。
 [clickme](http://stackoverflow.com/questions/19569688/right-aligned-uitextfield-spacebar-does-not-advance-cursor-in-ios-7/22512184#22512184)
+
+[源码示例SFUITextFieldInputSpaceFromRight](https://github.com/SwiftlyFly/problemsOfiOS/tree/master/SFUITextFieldInputSpaceFromRight)
+
 
