@@ -1,11 +1,14 @@
 problemsOfiOS
 ==========================================
+在学习iOS中遇见的问题及解决方案
+
 
 ##目录
 [设置UILabel的内边距](#设置UILabel的内边距)
-[UITextField右对齐无法输入空格解决方](#UITextField右对齐无法输入空格解决方案)
+[UITextField右对齐无法输入空格解决方案](#UITextField右对齐无法输入空格解决方案)
 
-在学习iOS中遇见的问题及解决方案
+
+
 
 设置UILabel的内边距
 ----------------------------------------
@@ -105,6 +108,7 @@ UITextField右对齐无法输入空格解决方案
 
 ### 问题说明
 今天使用UITextfield需要右对齐输入，但是当设置右对齐第一个字符输入空格后，神奇的一幕发生了，如下图，如果第一个字符不输入空格谁说可以正常输入，但是后面输入的空格不会也不回立即显示，除非输入下一个非空格字符之前输入空格才会显示。
+
 <img src="https://raw.githubusercontent.com/SwiftlyFly/problemsOfiOS/master/images/SFUITextFieldInputSpaceFromRight/1%E9%97%AE%E9%A2%98%E9%99%88%E8%BF%B0.gif" width="50%" height="30%">
 
 ### 解决思路
@@ -169,6 +173,7 @@ self.textField.delegate = self;
 **弊端分析：**上面代理方法`textField: shouldChangeCharactersInRange: replacementString:`对于很多输入字符返回的是NO，因此不能很好的监听`UITextFieldTextDidChangeNotification`，因此不推荐使用。
 
 **效果演示**
+
 <img src="https://raw.githubusercontent.com/SwiftlyFly/problemsOfiOS/master/images/SFUITextFieldInputSpaceFromRight/2%E4%BB%A3%E7%90%86%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA.gif" width="50%" height="50%">
 
 #### 方案2：通过addTarget: action: forControlEvents: 给textField添加响应事件
@@ -202,6 +207,7 @@ self.textField.delegate = self;
 该方法可以有效的解决问题，还能监听`UITextFieldTextDidChangeNotification`，推荐使用。
 
 **效果演示**
+
 <img src="https://raw.githubusercontent.com/SwiftlyFly/problemsOfiOS/master/images/SFUITextFieldInputSpaceFromRight/3%E8%87%AA%E5%AE%9A%E4%B9%89%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA.gif" width="50%" height="50%">
 
 ### 仍存在的问题
@@ -209,6 +215,7 @@ self.textField.delegate = self;
 
 
 解决思路：可以在textfield右侧放一个view，当输入结束时，计算输入内容最后面空格的宽度，然后作为view的宽度，当textfield成为第一响应者时，令view的宽度为0。
+
 <img src="https://raw.githubusercontent.com/SwiftlyFly/problemsOfiOS/master/images/SFUITextFieldInputSpaceFromRight/4%E4%BB%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98.gif" width="50%" height="50%">
 
 PS：谁有更好的方法@一下哦。
