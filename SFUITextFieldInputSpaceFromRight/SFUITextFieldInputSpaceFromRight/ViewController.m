@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.textField.delegate = self;
+//    self.textField.delegate = self;
 //    self.textField.autocorrectionType = UITextAutocorrectionTypeNo;
 }
 
