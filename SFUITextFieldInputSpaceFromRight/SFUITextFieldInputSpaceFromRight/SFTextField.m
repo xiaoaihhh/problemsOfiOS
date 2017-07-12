@@ -16,6 +16,7 @@
     if (self) {
         [self addTarget:self action:@selector(replaceNormalSpaceUsingNonbreakingSpace) forControlEvents:UIControlEventEditingChanged];
         }
+    
     return self;
 }
 
