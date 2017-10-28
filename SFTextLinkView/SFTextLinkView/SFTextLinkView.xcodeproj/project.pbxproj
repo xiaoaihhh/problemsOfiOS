@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		85FB32791FA46812006684F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85FB32781FA46812006684F7 /* AppDelegate.m */; };
+		85FB327C1FA46812006684F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85FB327B1FA46812006684F7 /* ViewController.m */; };
+		85FB327F1FA46812006684F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85FB327D1FA46812006684F7 /* Main.storyboard */; };
+		85FB32811FA46812006684F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85FB32801FA46812006684F7 /* Assets.xcassets */; };
+		85FB32841FA46812006684F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85FB32821FA46812006684F7 /* LaunchScreen.storyboard */; };
+		85FB32871FA46812006684F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85FB32861FA46812006684F7 /* main.m */; };
+		85FB328F1FA46A3F006684F7 /* SFTextLinkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85FB328E1FA46A3F006684F7 /* SFTextLinkView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		85FB32741FA46812006684F7 /* SFTextLinkView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFTextLinkView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85FB32771FA46812006684F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		85FB32781FA46812006684F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		85FB327A1FA46812006684F7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		85FB327B1FA46812006684F7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		85FB327E1FA46812006684F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		85FB32801FA46812006684F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85FB32831FA46812006684F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		85FB32851FA46812006684F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85FB32861FA46812006684F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		85FB328D1FA46A3F006684F7 /* SFTextLinkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFTextLinkView.h; sourceTree = "<group>"; };
+		85FB328E1FA46A3F006684F7 /* SFTextLinkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFTextLinkView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85FB32711FA46812006684F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85FB326B1FA46812006684F7 = {
+			isa = PBXGroup;
+			children = (
+				85FB32761FA46812006684F7 /* SFTextLinkView */,
+				85FB32751FA46812006684F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		85FB32751FA46812006684F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85FB32741FA46812006684F7 /* SFTextLinkView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85FB32761FA46812006684F7 /* SFTextLinkView */ = {
+			isa = PBXGroup;
+			children = (
+				85FB32771FA46812006684F7 /* AppDelegate.h */,
+				85FB32781FA46812006684F7 /* AppDelegate.m */,
+				85FB327A1FA46812006684F7 /* ViewController.h */,
+				85FB327B1FA46812006684F7 /* ViewController.m */,
+				85FB328D1FA46A3F006684F7 /* SFTextLinkView.h */,
+				85FB328E1FA46A3F006684F7 /* SFTextLinkView.m */,
+				85FB327D1FA46812006684F7 /* Main.storyboard */,
+				85FB32801FA46812006684F7 /* Assets.xcassets */,
+				85FB32821FA46812006684F7 /* LaunchScreen.storyboard */,
+				85FB32851FA46812006684F7 /* Info.plist */,
+				85FB32861FA46812006684F7 /* main.m */,
+			);
+			path = SFTextLinkView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85FB32731FA46812006684F7 /* SFTextLinkView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85FB328A1FA46812006684F7 /* Build configuration list for PBXNativeTarget "SFTextLinkView" */;
+			buildPhases = (
+				85FB32701FA46812006684F7 /* Sources */,
+				85FB32711FA46812006684F7 /* Frameworks */,
+				85FB32721FA46812006684F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SFTextLinkView;
+			productName = SFTextLinkView;
+			productReference = 85FB32741FA46812006684F7 /* SFTextLinkView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85FB326C1FA46812006684F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = LinkView;
+				TargetAttributes = {
+					85FB32731FA46812006684F7 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 85FB326F1FA46812006684F7 /* Build configuration list for PBXProject "SFTextLinkView" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85FB326B1FA46812006684F7;
+			productRefGroup = 85FB32751FA46812006684F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85FB32731FA46812006684F7 /* SFTextLinkView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85FB32721FA46812006684F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85FB32841FA46812006684F7 /* LaunchScreen.storyboard in Resources */,
+				85FB32811FA46812006684F7 /* Assets.xcassets in Resources */,
+				85FB327F1FA46812006684F7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85FB32701FA46812006684F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85FB327C1FA46812006684F7 /* ViewController.m in Sources */,
+				85FB32871FA46812006684F7 /* main.m in Sources */,
+				85FB328F1FA46A3F006684F7 /* SFTextLinkView.m in Sources */,
+				85FB32791FA46812006684F7 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		85FB327D1FA46812006684F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85FB327E1FA46812006684F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		85FB32821FA46812006684F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85FB32831FA46812006684F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		85FB32881FA46812006684F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		85FB32891FA46812006684F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85FB328B1FA46812006684F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = SFTextLinkView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LinkView.SFTextLinkView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		85FB328C1FA46812006684F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = SFTextLinkView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LinkView.SFTextLinkView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85FB326F1FA46812006684F7 /* Build configuration list for PBXProject "SFTextLinkView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85FB32881FA46812006684F7 /* Debug */,
+				85FB32891FA46812006684F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85FB328A1FA46812006684F7 /* Build configuration list for PBXNativeTarget "SFTextLinkView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85FB328B1FA46812006684F7 /* Debug */,
+				85FB328C1FA46812006684F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85FB326C1FA46812006684F7 /* Project object */;
+}
