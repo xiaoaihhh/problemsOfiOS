@@ -58,6 +58,7 @@ typedef void (^block)(void);
  */
 - (NSArray *)respondRectsFromRange:(NSRange)range
 {
+    self.selectable = YES; //不设置为YES iOS9计算会出错
     UITextPosition *beginning = self.beginningOfDocument;
     UITextPosition *rangeStart = [self positionFromPosition:beginning offset:range.location];
     UITextPosition *rangeEnd = [self positionFromPosition:rangeStart offset:range.length];
@@ -70,6 +71,7 @@ typedef void (^block)(void);
             [respondRects addObject:NSStringFromCGRect(rect)];
         }
     }
+    self.selectable = NO;
     return respondRects;
 }
 
