@@ -2,7 +2,7 @@
 //  SFMeCellFooterView.m
 //  百思不得姐
 //
-//  Created by 樊帅飞 on 16/7/2.
+//  Created by xiaoaihhh on 16/7/2.
 //  Copyright © 2016年 nowGO. All rights reserved.
 //
 

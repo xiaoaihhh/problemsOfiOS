@@ -1,9 +1,9 @@
 //
 //  AppDelegate.h
-//  SFLabel
+//  HHHPointInsde
 //
-//  Created by xiaoaihhh on 16/7/1.
-//  Copyright © 2016年 xiaoaihhh. All rights reserved.
+//  Created by xiaoaihhh on 2018/2/11.
+//  Copyright © 2018年 com.hhh.www. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -1,19 +1,12 @@
-problemsOfiOS
-==========================================
-在学习iOS中遇见的问题及解决方案
 
 
-##目录
-[设置UILabel的内边距](#设置UILabel的内边距)
+在学习iOS中遇见的问题及解决方案。
 
-[UITextField右对齐无法输入空格解决方案](#UITextField右对齐无法输入空格解决方案)
+目录
 
+[TOC]
 
-
-
-设置UILabel的内边距
-----------------------------------------
-
+#设置UILabel的内边距
 ###问题说明
 默认Label的显示效果如下
 <img src="https://raw.githubusercontent.com/SwiftlyFly/problemsOfiOS/master/images/SFLabel/QQ20160701-0%402x.png" width="50%" height="50%">
@@ -104,9 +97,7 @@ problemsOfiOS
 
 
 
-UITextField右对齐无法输入空格解决方案
-----------------------------------------
-
+#UITextField右对齐无法输入空格解决方案
 ### 问题说明
 今天使用UITextfield需要右对齐输入，但是当设置右对齐第一个字符输入空格后，神奇的一幕发生了，如下图，`如果第一个字符输入的是空格，那么光标会跳到左侧；如果输入其它字符，然后输入空格，此时输入的空格不会立即显示，直到再次输入其它字符时该空格会与输入的字符同时显示出来`。
 
@@ -226,5 +217,155 @@ PS：谁有更好的方法@一下哦。
 [clickme](http://stackoverflow.com/questions/19569688/right-aligned-uitextfield-spacebar-does-not-advance-cursor-in-ios-7/22512184#22512184)
 
 [源码示例SFUITextFieldInputSpaceFromRight](https://github.com/SwiftlyFly/problemsOfiOS/tree/master/SFUITextFieldInputSpaceFromRight)
+
+
+
+
+
+
+#使用UITextView设置超链接
+###遇到的坑坑坑
+下面说下在使用UITextView设置超链接时遇到的坑。
+UITextView可以通过设置富文本的方式进行超链接的设置。但是，UITextView默认有诸多手势，在长按时会出现菜单，放大镜，选中文本几种状态，但是并不想要这三种状态啊。
+为了取消菜单状态可以这么做：
+```
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    return NO;
+}
+```
+
+为了取消算中状态可以通过textView的代理来实现，一直将设置范围重置为0，如下：
+```
+- (void)textViewDidChangeSelection:(UITextView *)textView
+{
+    _textView.selectedRange = NSMakeRange(0, 0);
+}
+```
+为了取消放大镜状态尝试了各种方法，比如不同时机注销第一响应等，但是都没用。（如果有请麻烦告诉我，谢谢），但是这三种状态肯定都是通过去手势完成的，所以想到了最终方法，找到对应手势，将手势删除。
+大概可以这么做：
+
+```
+NSArray *textViewGestureRecognizers = self.textView.gestureRecognizers;
+    NSMutableArray *mutableArrayOfGestureRecognizers = [[NSMutableArray alloc] init];
+    for (UIGestureRecognizer *gestureRecognizer in textViewGestureRecognizers) {
+        if (![gestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]]) {
+            [mutableArrayOfGestureRecognizers addObject:gestureRecognizer];
+        } else {
+            UILongPressGestureRecognizer *longPressGestureRecognizer = (UILongPressGestureRecognizer *)gestureRecognizer;
+            if (longPressGestureRecognizer.minimumPressDuration < 0.5) {
+                [mutableArrayOfGestureRecognizers addObject:gestureRecognizer];
+            }
+        }
+    }
+    self.textView.gestureRecognizers = mutableArrayOfGestureRecognizers;
+```
+但是手势太多了，可能会误移除，将来谁知道苹果会怎么变，所以哪天手势稍有改动万一上线了出了问题，不得被老大骂死啊。
+然后决定使用TTTAttributedLabel来做这个需求，但是TTTAttributedLabel这玩意在我这布局总不对，通过debug发现绘制也是从0，0开始绘制的，实际出来却不是从0，0绘制，要偏上一些，github主页发现也有人碰到了类似问题，最后决定放弃使用TTTAttributedLabel了，还是使用UITextView自己通过计算链接区域来搞吧，也顺便将来应对图文混排需求；
+
+
+###解决方案
+下面大概说下思路，具体可见demo；
+
+1. 首先需要设置下面两个属性为NO
+```
+textView.editable = NO;
+textView.selectable = NO;
+```
+
+2.然后需要根据超链接的点击范围计算点击矩形区域，由于可能换行，所以返回数组，假设点击区域保存在`self.respondRects`
+```
+- (NSArray *)respondRectsFromRange:(NSRange)range
+{
+    UITextPosition *beginning = _textView.beginningOfDocument;
+    UITextPosition *rangeStart = [_textView positionFromPosition:beginning offset:range.location];
+    UITextPosition *rangeEnd = [_textView positionFromPosition:rangeStart offset:range.length];
+    UITextRange *textRange = [_textView textRangeFromPosition:rangeStart toPosition:rangeEnd];
+    NSArray *ranges = [_textView selectionRectsForRange:textRange];
+    NSMutableArray *respondRects = [NSMutableArray array];
+    for (UITextSelectionRect *selectionRect in ranges) {
+        CGRect rect = selectionRect.rect;
+        if (rect.size.width > 0 && rect.size.height > 0) {
+            [respondRects addObject:NSStringFromCGRect([_textView convertRect:rect toView:_textView.superview])];
+        }
+    }
+    return respondRects;
+}
+```
+
+3. 添加longPress手势，并设置minimumPressDuration = 0.01f; 设置0.01s是为了在模拟tap手势，在快速点击链接时也会做出响应；
+4. 在LongPress.state == UIGestureRecognizerStateEnded时判断点击的点是否在respondRects区域，是则进行相应；
+
+
+[源码示例SFTextLinkView](https://github.com/xiaoaihhh/problemsOfiOS/tree/master/SFTextLinkView/SFTextLinkView)
+
+
+
+
+
+# 扩大UIView的点击区域
+
+通常subview的bounds会大于superview的bounds，这样超过superview的区域在subview是无法点击的，通常可以重载view的`pointInside:withEvent:`的方法。同样，通过hook该方法可以简化流程，具体如下。
+
+首先创建`UIView+PointInside`分类。
+
+UIView+PointInside.h头文件中声明一个属性，
+
+```
+//需要扩大的点击区域，使用货注意置为nil
+@property(nonatomic, assign, nullable) NSArray *hitTestExpandRects;
+```
+
+UIView+PointInside.m文件如下，
+
+```
+//hook hook_pointInside:withEvent:方法
++(void)load{
+    Method hitTestMethod = class_getInstanceMethod([UIView class], @selector(pointInside:withEvent:));
+    Method hook_hitTestMethod= class_getInstanceMethod([UIView class], @selector(hook_pointInside:withEvent:));
+    method_exchangeImplementations(hitTestMethod, hook_hitTestMethod);
+}
+
+//运行时设置属性值
+- (void)setHitTestExpandRects:(NSArray *)hitTestExpandRects{
+     objc_setAssociatedObject(self, &bbaPointInsideExpandEdgeInsets, hitTestExpandRects, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSArray *)hitTestExpandRects{
+    return objc_getAssociatedObject(self, &bbaPointInsideExpandEdgeInsets);
+}
+
+//被hook后的方法
+- (BOOL)hook_pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+    //如果点击了原始view的bounds区域，直接返回
+    BOOL defaultHit = [self hook_pointInside:point withEvent:event];
+    if (defaultHit) {
+        return YES;
+    }
+    
+    //计算是否点击了扩大后的区域
+    NSArray *expandRects = self.hitTestExpandRects;
+    if (!expandRects) {
+        return NO;
+    }
+    for (NSString *rectStr in expandRects) {
+        if (![rectStr isKindOfClass:[NSString class]]) {
+            continue;
+        }
+        if (CGRectContainsPoint(CGRectFromString(rectStr), point)) {
+            return YES;
+        }
+    }
+
+    return NO;
+}
+```
+
+同样，可以声明一个CGPath属性，这样可以创建不规则点击区域。
+
+使用时只要`view.hitTestExpandRects = @[NSStringFromCGRect(CGRectMake(x, y, width, height))];`。
+
+[源码示例HHHPointInsde](https://github.com/xiaoaihhh/problemsOfiOS/tree/master/HHHPointInsde)
+
 
 

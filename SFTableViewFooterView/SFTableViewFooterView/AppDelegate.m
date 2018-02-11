@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  SFTableViewFooterView
 //
-//  Created by 樊帅飞 on 16/7/5.
-//  Copyright © 2016年 SwiftlyFly. All rights reserved.
+//  Created by xiaoaihhh on 16/7/5.
+//  Copyright © 2016年 xiaoaihhh. All rights reserved.
 //
 
 #import "AppDelegate.h"
