@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		858E39B92031819B00ED2A61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 858E39B82031819B00ED2A61 /* AppDelegate.m */; };
+		858E39BC2031819B00ED2A61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 858E39BB2031819B00ED2A61 /* ViewController.m */; };
+		858E39BF2031819B00ED2A61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858E39BD2031819B00ED2A61 /* Main.storyboard */; };
+		858E39C12031819B00ED2A61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858E39C02031819B00ED2A61 /* Assets.xcassets */; };
+		858E39C42031819B00ED2A61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858E39C22031819B00ED2A61 /* LaunchScreen.storyboard */; };
+		858E39C72031819B00ED2A61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 858E39C62031819B00ED2A61 /* main.m */; };
+		858E39CF203181DC00ED2A61 /* HHHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 858E39CE203181DC00ED2A61 /* HHHTextField.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		858E39B42031819B00ED2A61 /* HHHTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHHTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		858E39B72031819B00ED2A61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		858E39B82031819B00ED2A61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		858E39BA2031819B00ED2A61 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		858E39BB2031819B00ED2A61 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		858E39BE2031819B00ED2A61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		858E39C02031819B00ED2A61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		858E39C32031819B00ED2A61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		858E39C52031819B00ED2A61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		858E39C62031819B00ED2A61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		858E39CD203181DB00ED2A61 /* HHHTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHHTextField.h; sourceTree = "<group>"; };
+		858E39CE203181DC00ED2A61 /* HHHTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHHTextField.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		858E39B12031819B00ED2A61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		858E39AB2031819B00ED2A61 = {
+			isa = PBXGroup;
+			children = (
+				858E39B62031819B00ED2A61 /* HHHTextField */,
+				858E39B52031819B00ED2A61 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		858E39B52031819B00ED2A61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				858E39B42031819B00ED2A61 /* HHHTextField.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		858E39B62031819B00ED2A61 /* HHHTextField */ = {
+			isa = PBXGroup;
+			children = (
+				858E39B72031819B00ED2A61 /* AppDelegate.h */,
+				858E39B82031819B00ED2A61 /* AppDelegate.m */,
+				858E39BA2031819B00ED2A61 /* ViewController.h */,
+				858E39BB2031819B00ED2A61 /* ViewController.m */,
+				858E39CD203181DB00ED2A61 /* HHHTextField.h */,
+				858E39CE203181DC00ED2A61 /* HHHTextField.m */,
+				858E39BD2031819B00ED2A61 /* Main.storyboard */,
+				858E39C02031819B00ED2A61 /* Assets.xcassets */,
+				858E39C22031819B00ED2A61 /* LaunchScreen.storyboard */,
+				858E39C52031819B00ED2A61 /* Info.plist */,
+				858E39C62031819B00ED2A61 /* main.m */,
+			);
+			path = HHHTextField;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		858E39B32031819B00ED2A61 /* HHHTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 858E39CA2031819B00ED2A61 /* Build configuration list for PBXNativeTarget "HHHTextField" */;
+			buildPhases = (
+				858E39B02031819B00ED2A61 /* Sources */,
+				858E39B12031819B00ED2A61 /* Frameworks */,
+				858E39B22031819B00ED2A61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HHHTextField;
+			productName = HHHTextField;
+			productReference = 858E39B42031819B00ED2A61 /* HHHTextField.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		858E39AC2031819B00ED2A61 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = com.hhh.www;
+				TargetAttributes = {
+					858E39B32031819B00ED2A61 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 858E39AF2031819B00ED2A61 /* Build configuration list for PBXProject "HHHTextField" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 858E39AB2031819B00ED2A61;
+			productRefGroup = 858E39B52031819B00ED2A61 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				858E39B32031819B00ED2A61 /* HHHTextField */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		858E39B22031819B00ED2A61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				858E39C42031819B00ED2A61 /* LaunchScreen.storyboard in Resources */,
+				858E39C12031819B00ED2A61 /* Assets.xcassets in Resources */,
+				858E39BF2031819B00ED2A61 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		858E39B02031819B00ED2A61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				858E39BC2031819B00ED2A61 /* ViewController.m in Sources */,
+				858E39C72031819B00ED2A61 /* main.m in Sources */,
+				858E39CF203181DC00ED2A61 /* HHHTextField.m in Sources */,
+				858E39B92031819B00ED2A61 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		858E39BD2031819B00ED2A61 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				858E39BE2031819B00ED2A61 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		858E39C22031819B00ED2A61 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				858E39C32031819B00ED2A61 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		858E39C82031819B00ED2A61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		858E39C92031819B00ED2A61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		858E39CB2031819B00ED2A61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DU79Y72HDQ;
+				INFOPLIST_FILE = HHHTextField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hhh.www.HHHTextField;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		858E39CC2031819B00ED2A61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DU79Y72HDQ;
+				INFOPLIST_FILE = HHHTextField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hhh.www.HHHTextField;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		858E39AF2031819B00ED2A61 /* Build configuration list for PBXProject "HHHTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				858E39C82031819B00ED2A61 /* Debug */,
+				858E39C92031819B00ED2A61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		858E39CA2031819B00ED2A61 /* Build configuration list for PBXNativeTarget "HHHTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				858E39CB2031819B00ED2A61 /* Debug */,
+				858E39CC2031819B00ED2A61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 858E39AC2031819B00ED2A61 /* Project object */;
+}
