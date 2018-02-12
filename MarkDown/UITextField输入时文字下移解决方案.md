@@ -7,23 +7,22 @@ UITextField作为输入常用控件，但是问题却很多，本篇主要用于
 
 
 当设置`masksToBounds = YES`时，如果文字长度超过了TextField的宽度，那么文字位置就会下移，如下图：
-
+<img src="https://raw.githubusercontent.com/xiaoaihhh/problemsOfiOS/master/images/HHHTextField/masksToBounds.gif" width="100%" height="100%" align=center>
 
 
 当设置`masksToBounds = NO`时，如果文字长度超过了TextField的宽度且输入速度过快，那么TextField左侧会有文字闪动的问题，且删除文字时文字也会下移，如下图：
-
+<img src="https://raw.githubusercontent.com/xiaoaihhh/problemsOfiOS/master/images/HHHTextField/nonmasksToBounds.gif" width="100%" height="100%" align=center>
 
 
 当文字长度超过了TextField的宽度由竖屏变为横屏时，那么TextField左侧会有大片空白，如下图：
 
-<img src="https://raw.githubusercontent.com/xiaoaihhh/problemsOfiOS/master/images/HHHTextField/TextField结构.png" width="50%" height="50%" title="图3">
-
+<img src="https://raw.githubusercontent.com/xiaoaihhh/problemsOfiOS/master/images/HHHTextField/横竖屏.gif" width="100%" height="100%" align=center>
 
 
 # 原因分析
 
 UITextField结构如下图，当编辑时会成了`UIFieldEditor`，`UIFieldEditor`是继承UIScrollView，`UIFieldEditor`有一个子视图`_UIFieldEditorContentView`, `_UIFieldEditorContentView`用于展示文字和光标（`UITextSelectionView`）。
-
+<img src="https://raw.githubusercontent.com/xiaoaihhh/problemsOfiOS/master/images/HHHTextField/TextField结构.png" width="50%" height="50%" align=center>
 
 
 当编辑时，`_UIFieldEditorContentView`的frame会动态改变，`UIFieldEditor`的`contentOffset`也会改变，因此就出现了文字下移的问题。
@@ -81,3 +80,4 @@ UITextField结构如下图，当编辑时会成了`UIFieldEditor`，`UIFieldEdit
 
 
 [源码示例HHHTextField](https://github.com/xiaoaihhh/problemsOfiOS/tree/master/HHHTextField)
+
